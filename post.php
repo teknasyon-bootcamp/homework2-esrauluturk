@@ -22,4 +22,16 @@
  * warning=sarı, normal=arkaplan yok)
  * - `getPostDetails` fonksiyonu tetiklenerek ilgili içeriğin çıktısı gösterilmeli.
  */
-
+include_once "functions.php"; //functions.php deki fonksiyonlar kullanilmak uzere 1 kez dahil edilir.
+//isset() deger kontrolu
+if(!isset($id)) $id=1;
+if(!isset($type)) $type="warning";
+if(!isset($title)) $title="Hello World";
+//Renklendirme kontrolu
+if($type=="urgent") $color="#f00";
+elseif($type=="warning") $color="#ff0";
+else $color="#fff";
+//div type degerine gore arkaplan rengi alir.
+echo "<div style ='background-color:". $color." ;'>";
+  getPostDetails($id,$value["title"]); //getPostDetails() tetiklenir.
+echo "</div>";
