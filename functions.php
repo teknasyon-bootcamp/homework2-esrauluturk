@@ -24,9 +24,7 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
 };
 
 /*if(!defined('http://localhost/functions.php')) { //CONFIG_CLASS_INCLUDED
-    header('HTTP/1.0 403 Forbidden');
-    exit();
-   //die('Direct access not permitted');
+   die('Direct access not permitted');
 }*/
 
 function getLatestPosts($count = 5)
