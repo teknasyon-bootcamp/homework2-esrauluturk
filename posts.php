@@ -19,4 +19,12 @@
  * çalıştırmalısınız. Bu fonksiyondan aldığınız diziyi kullanarak `post.php` betik
  * dosyasını döngü içinde dahil etmeli ve her yazı için detayları göstermelisiniz.
  */
+include_once "functions.php"; //functions.php de yer alan fonksiyonlari kullanmak icin 1 kez dahil edilir.
+$randomPostNumber=getRandomPostCount(5,10);//random olarak bir sayi elde ederiz.
+$posts=getLatestPosts($randomPostNumber);//elde edilen random sayi ile getLatestPosts() calistirilir,bir dizi elde ederiz.
+foreach ($posts as $id=> $value){
+    $type= $value["type"];   
+    print($id." --> Title: ".$value["title"]." |  Type: ".$value["type"].'<br>'); //her yazi icin detaylar gosterilir.
+    include "post.php";     //1+ kez post.php dahil edilir.
+}
 
