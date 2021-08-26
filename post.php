@@ -28,9 +28,9 @@ if(!isset($id)) $id=1;
 if(!isset($type)) $type="warning";
 if(!isset($title)) $title="Hello World";
 //Renklendirme kontrolu
-if($type=="urgent") $color="#f00";
-elseif($type=="warning") $color="#ff0";
-else $color="#fff";
+if($type=="urgent") $color="#f00";     //kirmizi
+elseif($type=="warning") $color="#ff0";//sari
+else $color="#fff";                    //default
 //div type degerine gore arkaplan rengi alir.
 echo "<div style ='background-color:". $color." ;'>";
   getPostDetails($id,$value["title"]); //getPostDetails() tetiklenir.
