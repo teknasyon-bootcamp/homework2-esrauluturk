@@ -16,6 +16,19 @@
  * bekliyoruz. Bununla ilgili detaylı bilgi diğer betiklerde yer alıyor.
  */
 
+
+//Direkt olarak erisim saglanmasin diye olusturulan kontrol yapisi
+if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
+  header('HTTP/1.0 403 Forbidden');//Direkt erisim yasak-- hata kodu
+  exit();
+};
+
+/*if(!defined('http://localhost/functions.php')) { //CONFIG_CLASS_INCLUDED
+    header('HTTP/1.0 403 Forbidden');
+    exit();
+   //die('Direct access not permitted');
+}*/
+
 function getLatestPosts($count = 5)
 {
     $posts = [];
@@ -48,4 +61,7 @@ EOT;
 }
 
 // Aşağıya fonksiyonu tanımlayabilirsiniz.
-
+//Rasgele bir tamsayi donen fonksiyon
+function getRandomPostCount($min, $max){
+    return rand($min,$max);
+}
