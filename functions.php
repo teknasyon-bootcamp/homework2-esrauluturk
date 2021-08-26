@@ -24,8 +24,8 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
 };
 
 /*if(!defined('http://localhost/functions.php')) { //CONFIG_CLASS_INCLUDED
-   header('HTTP/1.0 403 Forbidden');
-   exit();
+    header('HTTP/1.0 403 Forbidden');
+    exit();
    //die('Direct access not permitted');
 }*/
 
