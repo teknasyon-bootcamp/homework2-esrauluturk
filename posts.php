@@ -23,7 +23,8 @@ include_once "functions.php"; //functions.php de yer alan fonksiyonlari kullanma
 $randomPostNumber=getRandomPostCount(5,10);//random olarak bir sayi elde ederiz.
 $posts=getLatestPosts($randomPostNumber);//elde edilen random sayi ile getLatestPosts() calistirilir,bir dizi elde ederiz.
 foreach ($posts as $id=> $value){
-    $type= $value["type"];   
+    $type= $value["type"];  
+    $title=$value["title"];
     print($id." --> Title: ".$value["title"]." |  Type: ".$value["type"].'<br>'); //her yazi icin detaylar gosterilir.
     include "post.php";     //1+ kez post.php dahil edilir.
 }
