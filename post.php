@@ -33,5 +33,5 @@ elseif($type=="warning") $color="#ff0";//sari
 else $color="#fff";                    //default
 //div type degerine gore arkaplan rengi alir.
 echo "<div style ='background-color:". $color." ;'>";
-  getPostDetails($id,$value["title"]); //getPostDetails() tetiklenir.
+  getPostDetails($id,$title); //getPostDetails() tetiklenir.
 echo "</div>";
